@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
+    
+.card{ 
+    border: 1px solid;
+    padding: 4%;
+    text-align: start;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 9px 1px #1d010125;
+}
+    

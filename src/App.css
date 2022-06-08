@@ -1,3 +1,24 @@
+.dark-mode {
+  background-color: #232137;
+  transition: 0.5s;
+}
+
+.light-mode {
+  background-color: #f3f6f7;
+  transition: 0.5s;
+}
+
+.button-darkMode {
+  padding: 0.5rem 1rem;
+  border: 0.2rem solid #8bcf21;
+  background-color: #8bcf21;
+  color: #232137;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  margin: 1.5rem;
+}
+
 .App {
   text-align: center;
 }
@@ -21,7 +42,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: red;
 }
 
 .App-link {
