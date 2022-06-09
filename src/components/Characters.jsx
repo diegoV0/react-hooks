@@ -14,7 +14,7 @@ const Characters = () => {
     <div class="container">
       {characters.map((character) => (
         <div className="card">
-          <figure>
+          <figure className="image">
             <img src={character.image} alt="" />
           </figure>
           <h3>{character.name}</h3>

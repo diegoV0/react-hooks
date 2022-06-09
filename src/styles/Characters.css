@@ -5,11 +5,13 @@
 } 
     
 .card{ 
+    height: 460px;
+    width: 285px;
     border: 1px solid;
     padding: 4%;
     text-align: start;
-    margin: 10px;
+    margin: 1px;
     border-radius: 10px;
     box-shadow: 1px 1px 9px 1px #1d010125;
 }
-    
+  
