@@ -7,11 +7,14 @@ import React, {
   useCallback,
 } from "react";
 import Search from "./Search";
+import useCharacters from "../hooks/useCharacters";
 import "../styles/Characters.css";
 
 const initialState = {
   favorites: [],
 };
+
+const API = "https://rickandmortyapi.com/api/character/";
 
 const favoriteReducer = (state, action) => {
   switch (action.type) {
@@ -26,10 +29,12 @@ const favoriteReducer = (state, action) => {
 };
 
 const Characters = () => {
-  const [characters, setCharacters] = useState([]);
+  ///const [characters, setCharacters] = useState([]);
   const [search, setSearch] = useState("");
   const searchInput = useRef(null);
   const [favorites, dispatch] = useReducer(favoriteReducer, initialState);
+
+  const characters = useCharacters(API);
 
   const handleClick = (favorite) => {
     dispatch({ type: "ADD_TO_FAVORITE", payload: favorite });
@@ -53,11 +58,11 @@ const Characters = () => {
     [characters, search]
   );
 
-  useEffect(() => {
-    fetch("https://rickandmortyapi.com/api/character/")
-      .then((response) => response.json())
-      .then((data) => setCharacters(data.results));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://rickandmortyapi.com/api/character/")
+  //     .then((response) => response.json())
+  //     .then((data) => setCharacters(data.results));
+  // }, []);
 
   return (
     <div className="container">
